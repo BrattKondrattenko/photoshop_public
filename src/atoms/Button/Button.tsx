@@ -1,25 +1,19 @@
-import { ReactNode } from 'react';
+import {CSSProperties, ReactNode} from 'react';
 import MUIButton from '@mui/material/Button';
 import { SxProps, Theme } from '@mui/material/styles';
 
 interface ButtonProps {
   onClick: () => void;
+  styles?: CSSProperties;
   children: ReactNode;
 }
 
-const buttonSx: SxProps<Theme> = {
-  backgroundColor: 'red',
-  color: '#fff',
-  borderRadius: '50px',
-  textTransform: 'none',
-  fontWeight: 500,
-};
 
-export default function Button({ onClick, children }: ButtonProps) {
+export default function Button({ onClick, styles, children }: ButtonProps) {
   return (
     <MUIButton 
-    variant="contained"  
-    sx={buttonSx}
+    variant="contained"
+    style={styles}
     onClick={onClick}>
       {children}
     </MUIButton>

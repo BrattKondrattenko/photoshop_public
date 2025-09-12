@@ -9,6 +9,11 @@
     font-family: 'Roboto', sans-serif;
   }
 
+  #root {
+    display: flex;
+    align-items: center;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
